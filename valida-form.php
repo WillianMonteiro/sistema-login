@@ -1,13 +1,28 @@
 <?php 
-	if(isset($_POST['bnt-login'])){
-		$form['user'] = mysql_real_escape_string($_POST['usuario']);
-		$form['pass'] = mysql_real_escape_string($_POST['senha']);
 
-			if(empty($form{'user'})){			
-				header('Location: http://localhost/sessao/login.php?page=login?&error=1');
-	    	}elseif (empty($form['pass'])){
-	    		header('Location: http://localhost/sessao/login.php?page=login?&error=2');
-	    	}elseif ($form['user'] != 'willian'){
-	    		header('Location: http://localhost/sessao/login.php?page=login?&error=3');
-	    	}
+require "system/config.php";
+
+if(isset($_POST['bnt-login'])){
+	$usuario = $_POST['usuario'];
+	$senha = $_POST['senha'];
+
+	$erro = 0; 
+
+	if(empty($usuario)) {			
+		$erro = 1;
+    	} elseif(empty($senha)) {
+    		$erro = 2;
+    	} elseif($usuario != 'willian' || $senha != '1234') {
+    		$erro = 3;
+    	}
+
+
+	if( $erro === 0 ) {
+		$_SESSION['logado'] = 	true;		
+		$_SESSION['usuario'] = 	$usuario;
+		header('Location: '.BASE_URL.'/admin');
+	} 	
+	else{
+		header("Location: ".BASE_URL."?page=login&error=$erro");
 	}
+}
