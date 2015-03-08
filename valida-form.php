@@ -18,6 +18,7 @@ if(isset($_POST['bnt-login'])){
 
 
 	if( $erro === 0 ) {
+		session_start();	
 		$_SESSION['logado'] = 	true;		
 		$_SESSION['usuario'] = 	$usuario;
 		header('Location: '.BASE_URL.'/admin');
