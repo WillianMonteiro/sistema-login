@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html> 
 	<head>
@@ -12,14 +13,14 @@
 			<nav class="menu"> 
 				<ul>
 			       		<li><a href="index.php?page=inicio">INÍCIO</a></li>
-			       		<li><a href="index.php?page=login">LOGIN</a></li>
-			       		<li><a href="index.php?page=cadastro">CADASTRO</a></li>
+						<li><a href="index.php?page=login">LOGIN</a></li>
+			       		<li><a href="index.php?page=criar_conta">CADASTRO</a></li>
 				</ul>
 			</nav>
 		</header>
 		<?php
-		$page = isset($_GET['page'])?$_GET['page'] : 'login';
-		include "$page.php";
+			$page = isset($_GET['page'])?$_GET['page'] : 'inicio';
+			include "$page.php";
 		?>
 	</body>
 </html>

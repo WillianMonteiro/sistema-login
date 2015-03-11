@@ -1,14 +1,14 @@
   	*{ padding: 0; margin:0; font-family:"sans-serif", arial,verdana; }
 
-  	.container{width:1200px; margin:auto;}
+  	.container{width:1200px; margin:0 auto;}
     #header{
-	width: 100%;
-	background-color: #069;
-	height: 51px;
-	margin-bottom: 40px;
-	box-shadow: 0 1px 9px #999;
-	-moz-box-shadow: 0 1px 9px #999;
-	-webkit-box-shadow: 0 1px 9px #999;
+  	width: 100%;
+  	background-color: #069;
+  	height: 51px;
+  	margin-bottom: 40px;
+  	box-shadow: 0 1px 9px #999;
+  	-moz-box-shadow: 0 1px 9px #999;
+  	-webkit-box-shadow: 0 1px 9px #999;
     }
 
     #header h1{
@@ -37,8 +37,8 @@
 
   	.box-login{width:305px; padding:10px;}
 
-  	.bnt-login{padding:5px 15px;margin:5px; float:right; margin-right:30px; width:100px; background-color: #069; color: #FFF; border: 0px; font-weight: bold;}
-    .bnt-login:hover{opacity: 0.8; border: 1px solid #000;}
+  	.bnt{padding:5px 15px;margin:5px; float:right; margin-right:30px; width:100px; background-color: #069; color: #FFF; border: 0px; font-weight: bold;}
+    .bnt:hover{opacity: 0.8; border: 1px solid #000;}
     fieldset{border: 1px solid #069;}
   	input{margin-left:25px; width:250px; height:35px; }
   	label{font-size:20px; color: #069; margin-left:25px;}
